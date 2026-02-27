@@ -2534,7 +2534,7 @@ span {
   width: 100%;
   height: 100%;
   transition: all 0.4s ease-in-out;
-  filter: blur(2px);
+  /* filter: blur(2px); */
 }
 .gt-work-box-items .gt-thumb .gt-number {
   font-size: 100px;
@@ -9377,5 +9377,8 @@ span {
     background-color: #fff;
     width: 15%;
     z-index: 1;
+}
+.header-section-1 .main-logo img{
+  width: 130px;
 }
 }
