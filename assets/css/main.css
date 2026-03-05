@@ -5262,6 +5262,7 @@ span {
 
 .gt-hero-1 {
   padding-top: 50px;
+  height: 800px;
 }
 @media (max-width: 1199px) {
   .gt-hero-1 {
@@ -5321,7 +5322,7 @@ span {
   }
 }
 .gt-hero-1 .gt-hero-content h1 {
-  color: var(--gt-white);
+  color: var(--gt-black);
   font-size: 65px;
 }
 @media (max-width: 1199px) {
@@ -5332,7 +5333,7 @@ span {
 .gt-hero-1 .gt-hero-content p {
   font-size:25px;
   font-weight: 400;
-  color: var(--gt-white);
+  color: var(--gt-header);
   opacity: 0.8;
   max-width: 790px;
   margin-top: 25px;
