@@ -9578,3 +9578,35 @@ transform:translateY(0px);
 }
 
 }
+.corner-top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.corner-bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.corner-top img{
+    width: 200px;
+    animation: floatMove 3s ease-in-out infinite alternate;
+}
+
+.corner-bottom img{
+    width: 240px;
+    animation: floatMove 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatMove{
+    0%{
+        transform: translate(0,0);
+    }
+    100%{
+        transform: translate(15px,10px);
+    }
+}
