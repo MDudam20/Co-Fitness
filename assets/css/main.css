@@ -1,13 +1,5 @@
 /*
-Theme Name: ShotFit 
-Author: Pixel-plus
-Author URI: https://themeforest.net/user/Pixel-plus/portfolio
-Description: ShotFit- Fitness and Gym HTML Template
-Service Html Template 
-Version: 1.0.0
-*/
-/*CSS Table Of Content Ends Here*/
-/*
+
 --------------------------------------------------------------
 [Table of Contents]
 --------------------------------------------------------------
@@ -37,7 +29,8 @@ Version: 1.0.0
 --------------------------------------------------------------
 */
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&amp;display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 :root {
   --gt-body: #fff;
   --gt-black: #000;
@@ -200,7 +193,7 @@ Version: 1.0.0
     Template Default Fonts & Fonts Styles
  ---------------------------------------------- */
 body {
-  font-family: "Archivo", sans-serif;
+  font-family:'Inter', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
@@ -238,7 +231,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Kanit", sans-serif;
+  font-family: "Archivo", sans-serif;
   margin: 0px;
   padding: 0;
   color: var(--gt-header);
@@ -7397,21 +7390,26 @@ span {
 
 .gt-service-offer-item-2 {
   margin-top: 30px;
-  border: 2px solid var(--gt-black);
-  padding: 10px;
+  border-radius: 30px;
 }
 .gt-service-offer-item-2 .gt-service-offer-image img {
   width: 100%;
   height: 300px;
+      width: 100%;
+    height: 300px;
+    
+    border-radius: 10px 10px 0px 0px;
+
 }
 .gt-service-offer-item-2 .gt-service-offer-content {
   background-color: var(--gt-white);
-  padding: 0 0 24px;
+  padding: 0 0 29px;
   position: relative;
+  border-radius:  10px;
 }
 .gt-service-offer-item-2 .gt-service-offer-content .gt-post {
   background-color: var(--gt-theme);
-  color: var(--gt-text);
+  color: var(--gt-black);
   display: inline-block;
   padding: 10px 44px;
   transform: rotate(-90deg);
@@ -7423,7 +7421,7 @@ span {
   line-height: 1;
   z-index: 999;
   border-radius: 8px 0px 0px 0px;
-  background-color: #F4F4F4;
+ 
   transition: all 0.4s ease-in-out;
   z-index: 9;
 }
@@ -9429,4 +9427,154 @@ span {
 .gt-work-process-section .gt-section-title h6 i,
 .gt-testimonial-section-2 .gt-section-title h6 i{
   color: #000;
+}
+.b{
+  background:linear-gradient(45deg, #BB1900, #FD6F01, #FFB000);
+}
+
+
+       .role-dashboard{
+background:#ffffff;
+padding: 120px 0px;
+}
+
+.dashboard-wrapper{
+background:white;
+padding:55px 35px;
+border-radius:18px;
+box-shadow:0 20px 50px rgba(0,0,0,0.08);
+}
+
+.dashboard-tabs .nav-link{
+border:none;
+padding:12px 30px;
+font-weight:600;
+color:#0c0b0b;
+font-size: 18px;
+}
+.dashboard-tabs .nav-link i{
+  margin-right: 8px;
+}
+.dashboard-tabs .nav-link.active{
+color:#ff7a00;
+border-bottom:3px solid #ff7a00;
+background:none;
+}
+
+.dashboard-features{
+list-style:none;
+padding:0;
+margin-bottom:25px;
+}
+
+.dashboard-features li{
+padding:10px 0;
+font-size:16px;
+color: #000;
+font-weight: 700;
+}
+
+.dashboard-features li::before{
+content:"✔";
+color:#ff7a00;
+margin-right:10px;
+background-color: #000;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+padding: 5px 8px;
+}
+
+.dashboard-img{
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.12);
+}
+
+.dashboard-side-card{
+background:linear-gradient(45deg, #ff8d7b, #ffb175, #FFB000);;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.dashboard-side-card h6{
+margin-bottom:15px;
+font-weight: 800;
+font-size: 20px;
+}
+
+.dashboard-side-card ul{
+padding:0;
+list-style:none;
+}
+
+.dashboard-side-card li{
+padding:6px 0;
+font-size:15px;
+font-weight: 600;
+color: #1D2229;
+}
+
+.coach-card{
+display:flex;
+align-items:center;
+gap:10px;
+background:#fafafa;
+padding:12px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.coach-card img{
+width:45px;
+height:45px;
+border-radius:50%;
+}
+
+.corner-img{
+position:absolute;
+
+opacity:0.9;
+z-index:0;
+animation:floatAnimation 6s ease-in-out infinite;
+}
+
+.top-left{
+    top: 25px;
+    left: 10px;
+    width: 200px;
+}
+
+.top-right{
+    top: 10px;
+    right: 0px;
+    width: 240px;
+}
+
+.bottom-left{
+    bottom: -66px;
+    left: 10px;
+    width: 206px;
+}
+
+.bottom-right{
+    bottom: -50px;
+    right: 0px;
+    width: 211px;
+}
+
+@keyframes floatAnimation{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
 }

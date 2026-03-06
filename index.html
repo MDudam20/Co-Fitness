@@ -31,6 +31,7 @@
         <link rel="stylesheet" href="assets/css/icomon.css">
          <!--<< Main.css >>-->
         <link rel="stylesheet" href="assets/css/main.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     </head>
     <body>
 
@@ -654,94 +655,282 @@ for Everyone <br>
 
 
         <!-- GT Weekly Schedule Section Start -->
-        <section class="gt-weekly-schedule-section fix section-padding">
-            <div class="gt-left-shape">
-                <img src="assets/img/home-1/left-shape.png" alt="img">
-            </div>
-            <div class="gt-right-shape">
-                <img src="assets/img/home-1/right-shape.png" alt="img">
-            </div>
-            <div class="container">
-                <div class="gt-section-title-area">
-                    <div class="gt-section-title">
-                        <h6 class="wow fadeInUp"><i class="icon-icon-1"></i>Dashboard</h6>
-                        <h2 class="wow fadeInUp" data-wow-delay=".3s">
-                           For Dashboard
-                        </h2>
-                    </div>
-                    <a href="schedule.html" class="gt-theme-btn wow fadeInUp" data-wow-delay=".5s">
-                        <span class="shotfit-btn__text">VIEW ALL CLASSES <i class="fa-regular fa-arrow-up-right"></i></span>
-                        <span class="shotfit-btn__hover shotfit-btn__hover--1"></span>
-                        <span class="shotfit-btn__hover shotfit-btn__hover--2"></span>
-                        <span class="shotfit-btn__hover shotfit-btn__hover--3"></span>
-                        <span class="shotfit-btn__hover shotfit-btn__hover--4"></span>
-                        <span class="shotfit-btn__hover shotfit-btn__hover--5"></span>
-                    </a>
+        <section class="role-dashboard position-relative">
+    
+        <div class="container">
+
+            <!-- Corner Images -->
+
+<img src="assets/img/cofitness/4.png" class="corner-img top-left">
+<img src="assets/img/cofitness/9.png" class="corner-img top-right">
+<img src="assets/img/cofitness/8.png" class="corner-img bottom-left">
+<img src="assets/img/cofitness/3.png" class="corner-img bottom-right">
+    
+            <div class="gt-section-title text-center">
+                    <h6 class="wow fadeInUp"><i class="icon-icon-1"></i> WORK PROCESS <i class="icon-icon-1"></i></h6>
+                    <h2 class=" wow fadeInUp" data-wow-delay=".3s">
+                    Our Gym Fitness Classes
+                    </h2>
                 </div>
-                <ul class="nav">
-                    <!-- <li class="nav-item wow fadeInUp" data-wow-delay=".2s">
-                        <a href="#admin" data-bs-toggle="tab" class="nav-link">
-                           Admin Dashboard
-                        </a>
-                    </li> -->
-                    <li class="nav-item wow fadeInUp" data-wow-delay=".4s">
-                        <a href="#traniner" data-bs-toggle="tab" class="nav-link active">
-                          Trainer Dashboard
-                        </a>
+    
+            <div class="dashboard-wrapper">
+    
+                <ul class="nav nav-tabs dashboard-tabs justify-content-center"  id="roleTabs">
+    
+                    <li class="nav-item">
+                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#admin">
+                            <i class="bi bi-person-fill"></i> Admin
+                        </button>
                     </li>
-                    <li class="nav-item wow fadeInUp" data-wow-delay=".6s">
-                        <a href="#nutrition" data-bs-toggle="tab" class="nav-link">
-                           Nutrition Dashboard
-                        </a>
+    
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#trainer">
+                            <i class="bi-person-workspace"></i>Trainer
+                        </button>
                     </li>
-                     <li class="nav-item wow fadeInUp" data-wow-delay=".6s">
-                        <a href="#user" data-bs-toggle="tab" class="nav-link">
-                         User Dashboard
-                        </a>
+    
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#nutritionist">
+                            <i class="bi-clipboard2-pulse"></i> Nutritionist
+                        </button>
                     </li>
-                   
+    
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#user">
+                            <i class="bi-person"></i>User
+                        </button>
+                    </li>
+    
                 </ul>
-                 <div class="tab-content">
-                <!-- <div id="admin" class="tab-pane fade">
-                    <div class="gt-weekly-schedule-wrapper">
-                        <div class="gt-weekly-schedule-items">
-                            <div class="row g-0 align-items-center">
-                               <img src="assets/img/cofitness/admin-dashboard.png" alt="">
+    
+    
+                <div class="tab-content dashboard-content my-5">
+    
+                    <!-- ADMIN -->
+    
+                    <div class="tab-pane fade show active" id="admin">
+    
+                        <div class="row align-items-center g-4">
+    
+                            <div class="col-lg-4">
+    
+                                <ul class="dashboard-features">
+    
+                                    <li>Full Access Management</li>
+                                    <li>Assign Users to Trainers</li>
+                                    <li>Monitor All Chats</li>
+                                    <li>Track Progress Records</li>
+    
+                                </ul>
+    
+                                <div class="coach-card">
+    
+                                    <img src="assets/img/cofitness/DHANANJAY-FEED-2.png">
+    
+                                    <div>
+                                        <h6>Coach Dhananjay Shinde</h6>
+                                        <span>Certified Fitness Coach</span>
+                                    </div>
+    
+                                </div>
+    
                             </div>
-                        </div>
-                    </div>
-                </div> -->
-                <div id="traniner" class="tab-pane fade show active">
-                    <div class="gt-weekly-schedule-wrapper">
-                        <div class="gt-weekly-schedule-items">
-                            <div class="row g-0 align-items-center">
-                                <img src="assets/img/cofitness/trainer-dashboard.png" alt="">
+    
+    
+                            <div class="col-lg-5">
+    
+                                <img src="assets/img/cofitness/admin-dashboard.png" class="img-fluid dashboard-img">
+    
                             </div>
+    
+    
+                            <div class="col-lg-3">
+    
+                                <div class="dashboard-side-card">
+    
+                                    <h6>Full Access Management</h6>
+    
+                                    <ul>
+                                        <li>Assign Users</li>
+                                        <li>Monitor Chats</li>
+                                        <li>Track Progress</li>
+                                        <li>Manage Subscriptions</li>
+                                    </ul>
+    
+                                </div>
+    
+                            </div>
+    
                         </div>
+    
                     </div>
+    
+                    <!-- trainer -->
+                    <div class="tab-pane fade" id="trainer">
+    
+                        <div class="row align-items-center g-4">
+    
+                            <div class="col-lg-4">
+    
+                                <ul class="dashboard-features">
+                                    <li>View Assigned Clients</li>
+                                    <li>Track Workout Progress</li>
+                                    <li>Chat With Members</li>
+                                    <li>Update Training Plans</li>
+                                </ul>
+    
+                                <div class="coach-card">
+                                    <img src="assets/img/home-3/trainer/trainer-5.jpg">
+                                    <div>
+                                        <h6>Trainer Dashboard</h6>
+                                        <span>Client Management</span>
+                                    </div>
+                                </div>
+    
+                            </div>
+    
+    
+                            <div class="col-lg-5">
+    
+                                <img src="assets/img/cofitness/trainer-dashboard.png" class="img-fluid dashboard-img">
+    
+                            </div>
+    
+    
+                            <div class="col-lg-3">
+    
+                                <div class="dashboard-side-card">
+    
+                                    <h6>Trainer Tools</h6>
+    
+                                    <ul>
+                                        <li>Workout Programs</li>
+                                        <li>Client Progress</li>
+                                        <li>Daily Reports</li>
+                                        <li>Message Clients</li>
+                                    </ul>
+    
+                                </div>
+    
+                            </div>
+    
+                        </div>
+    
+                    </div>
+    
+                    <!-- nutritionist -->
+                    <div class="tab-pane fade" id="nutritionist">
+    
+                        <div class="row align-items-center g-4">
+    
+                            <div class="col-lg-4">
+    
+                                <ul class="dashboard-features">
+                                    <li>Create Diet Plans</li>
+                                    <li>Monitor Nutrition Progress</li>
+                                    <li>Chat With Clients</li>
+                                    <li>Update Meal Programs</li>
+                                </ul>
+    
+                                <div class="coach-card">
+                                    <img src="assets/img/home-3/trainer/trainer-4.jpg">
+                                    <div>
+                                        <h6>Nutritionist Panel</h6>
+                                        <span>Meal Planning System</span>
+                                    </div>
+                                </div>
+    
+                            </div>
+    
+    
+                            <div class="col-lg-5">
+    
+                                <img src="assets/img/cofitness/nutritionist-dashboard.png" class="img-fluid dashboard-img">
+    
+                            </div>
+    
+    
+                            <div class="col-lg-3">
+    
+                                <div class="dashboard-side-card">
+    
+                                    <h6>Nutrition Tools</h6>
+    
+                                    <ul>
+                                        <li>Diet Planning</li>
+                                        <li>Calorie Tracking</li>
+                                        <li>Meal Adjustments</li>
+                                        <li>Health Monitoring</li>
+                                    </ul>
+    
+                                </div>
+    
+                            </div>
+    
+                        </div>
+    
+                    </div>
+    
+                    <!-- User -->
+                    <div class="tab-pane fade" id="user">
+    
+                        <div class="row align-items-center g-4">
+    
+                            <div class="col-lg-4">
+    
+                                <ul class="dashboard-features">
+                                    <li>View AI Diet Plan</li>
+                                    <li>Track Weight Records</li>
+                                    <li>Upload Progress Photos</li>
+                                    <li>Chat With Trainer</li>
+                                </ul>
+    
+                                <div class="coach-card">
+                                    <img src="assets/img/home-3/trainer/trainer-3.jpg">
+                                    <div>
+                                        <h6>User Dashboard</h6>
+                                        <span>Fitness Tracking</span>
+                                    </div>
+                                </div>
+    
+                            </div>
+    
+    
+                            <div class="col-lg-5">
+    
+                                <img src="assets/img/cofitness/user-dashboard.png" class="img-fluid dashboard-img">
+    
+                            </div>
+    
+    
+                            <div class="col-lg-3">
+    
+                                <div class="dashboard-side-card">
+    
+                                    <h6>Fitness Tools</h6>
+    
+                                    <ul>
+                                        <li>Diet Plan Access</li>
+                                        <li>Workout Progress</li>
+                                        <li>Photo Tracking</li>
+                                        <li>Health Records</li>
+                                    </ul>
+    
+                                </div>
+    
+                            </div>
+    
+                        </div>
+    
+                    </div>
+    
                 </div>
-                <div id="nutrition" class="tab-pane fade">
-                   <div class="gt-weekly-schedule-wrapper">
-                        <div class="gt-weekly-schedule-items">
-                            <div class="row g-0 align-items-center">
-                                <img src="assets/img/cofitness/nutrition-dashboard.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="user" class="tab-pane fade">
-                   <div class="gt-weekly-schedule-wrapper">
-                        <div class="gt-weekly-schedule-items">
-                            <div class="row g-0 align-items-center">
-                                <img src="assets/img/cofitness/user-dashboard.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
+    
             </div>
-            </div>
-        </section>
+    
+        </div>
+    
+    </section>
 
 
 
@@ -806,7 +995,7 @@ for Everyone <br>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-                        <div class="pricing-card-item-3">
+                        <div class="pricing-card-item-3 b ">
                             <span class="post">MOST POPULAR</span>
                             <div class="pricing-header">
                                 <h3>AI + Coaching Plan</h3>
@@ -1369,6 +1558,27 @@ for Everyone <br>
         <script src="assets/js/wow.min.js"></script>
         <!--<< Main.js >>-->
         <script src="assets/js/main.js"></script>
+        <script id="autoTabSwitch">
+
+const tabs = document.querySelectorAll('#roleTabs .nav-link');
+
+let currentTab = 0;
+
+function switchTab(){
+
+currentTab++;
+
+if(currentTab >= tabs.length){
+currentTab = 0;
+}
+
+tabs[currentTab].click();
+
+}
+
+setInterval(switchTab, 4000);
+
+</script>
     </body>
 
 </html>
