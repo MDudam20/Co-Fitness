@@ -3520,12 +3520,13 @@ span {
   margin-bottom: 30px;
 }
 .gt-footer-widget-wrapper-3 .gt-footer-widget-items .gt-widget-head h3 {
-  color: var(--gt-white);
+  color: var(--gt-black);
 }
 .gt-footer-widget-wrapper-3 .gt-footer-widget-items .gt-footer-content p {
-  color: var(--gt-white);
+  color: #020202;
   opacity: 0.7;
 }
+
 .gt-footer-widget-wrapper-3 .gt-footer-widget-items .gt-footer-content .gt-call-info {
   display: flex;
   align-items: center;
@@ -3558,7 +3559,7 @@ span {
   margin-bottom: 20px;
 }
 .gt-footer-widget-wrapper-3 .gt-footer-widget-items .gt-list-area li a {
-  color: #FCFCFC;
+  color: #262525;
   opacity: 0.7;
 }
 .gt-footer-widget-wrapper-3 .gt-footer-widget-items .gt-list-area li:hover {
@@ -7440,7 +7441,7 @@ span {
 .gt-service-offer-item-2 .gt-service-offer-content .gt-service-icon-item {
   display: flex;
   gap: 16px;
-  margin-left: 35px;
+  /* margin-left: 35px; */
 }
 .gt-service-offer-item-2 .gt-service-offer-content .gt-service-icon-item .gt-icon {
   width: 80px;
@@ -9609,4 +9610,495 @@ transform:translateY(0px);
     100%{
         transform: translate(15px,10px);
     }
+}
+.about-coach{
+
+background-image: url(../img/cofitness/bg5.png);
+padding: 60px 0px;
+background-repeat: no-repeat;
+background-size: contain;
+position:relative;
+overflow:hidden;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1.2fr;
+gap:50px;
+align-items:center;
+}
+
+.coach-image-wrapper{
+position:relative;
+}
+
+.coach-img{
+width:100%;
+border-radius:20px;
+box-shadow:0 20px 50px rgba(0,0,0,0.1);
+}
+
+.experience-badge{
+position:absolute;
+bottom:20px;
+left:20px;
+background:#ff7a00;
+color:#fff;
+padding:14px 18px;
+border-radius:10px;
+font-weight:600;
+text-align:center;
+}
+
+.experience-badge span{
+font-size:22px;
+display:block;
+}
+
+.coach-content h2{
+font-size:34px;
+font-weight:700;
+margin-bottom:15px;
+}
+
+.coach-content p{
+color:#555;
+line-height:1.7;
+margin-bottom:15px;
+font-size:15px;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+margin:30px 0;
+}
+
+.stat-card{
+background:white;
+padding:20px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.stat-card h3{
+color:#ff7a00;
+font-size:24px;
+margin-bottom:5px;
+}
+
+.stat-card span{
+font-size:14px;
+color:#666;
+}
+
+.about-btn{
+display:inline-block;
+background:#ff7a00;
+color:white;
+padding:14px 30px;
+border-radius:30px;
+font-weight:600;
+text-decoration:none;
+transition:0.3s;
+}
+
+.about-btn:hover{
+background:#e36800;
+}
+@media(max-width:992px){
+
+.about-grid{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.experience-badge{
+left:50%;
+transform:translateX(-50%);
+}
+
+.stats-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+.vmv-section {
+            padding: 150px 0;
+            background: url(../img/cofitness/bg3.png);
+            background-position: center;
+            background-size:cover;
+            background-repeat: no-repeat;
+            
+        }
+
+        .vmv-card {
+            position: relative;
+            padding: 70px 40px 40px 40px;
+            background: #ffffff;
+            border: 1px solid #3a3939;
+            border-radius: 20px;
+            transition: .4s;
+            height: 100%;
+            margin-top: 20px;
+        }
+
+        .vmv-card h3 {
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+            color: var(--gt-theme);
+        }
+
+        .vmv-card p {
+            color: #2d2a2a;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        /* circle image */
+
+        .vmv-icon {
+            position: absolute;
+            top: -40px;
+            left: 35%;
+            width: 90px;
+            height: 90px;
+            background: #000000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+        }
+
+        .vmv-icon img {
+            width: 40px;
+            border-radius: 20px;
+        }
+
+        /* hover background image */
+
+        .vmv-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: .5s;
+            z-index: 0;
+            border-radius: 20px;
+        }
+
+        /* overlay */
+
+        .vmv-card::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #020202, #3b3a3a);
+            opacity: 0;
+            transition: .5s;
+            z-index: 1;
+            border-radius: 20px;
+        }
+
+        /* hover */
+
+        .vmv-card:hover::before {
+            opacity: 1;
+        }
+
+        .vmv-card:hover::after {
+            opacity: .9;
+        }
+
+        .vmv-card:hover h3,
+        .vmv-card:hover p {
+            color: #fff;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* different images */
+
+        .mission::before {
+            background-image: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d");
+        }
+
+        .vision::before {
+            background-image: url("https://images.unsplash.com/photo-1552664730-d307ca884978");
+        }
+
+        .strategy::before {
+            background-image: url("https://images.unsplash.com/photo-1556761175-4b46a572b786");
+        }
+
+        /* responsive */
+
+        @media(max-width:768px) {
+
+            .vmv-card {
+                margin-bottom: 60px;
+            }
+
+        }
+.plan-section{
+padding:80px 20px;
+background: url(../img/cofitness/plan-bg.png);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+.plan-wrapper{
+display:grid;
+grid-template-columns:1.3fr 0.7fr;
+gap:40px;
+/*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=f4bb3d&c2=e58849&gt=l&gd=dtl
+*/
+padding:50px;
+border-radius:20px;
+box-shadow:0 20px 50px rgba(0,0,0,0.08);
+margin-bottom:40px;
+}
+
+.plan-left h2{
+font-size:34px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.subtitle{
+color:#777;
+margin-bottom:25px;
+}
+
+.plan-features{
+list-style:none;
+padding:0;
+}
+
+.plan-features li{
+margin-bottom:12px;
+font-size:16px;
+padding-left:28px;
+position:relative;
+}
+
+.plan-features li:before{
+content:"✔";
+color:#ff7a00;
+position:absolute;
+left:0;
+}
+
+.pricing-card{
+background: #F4BB3D;
+background: linear-gradient(315deg, #F4BB3D, #E58849);;
+border-radius:18px;
+padding:35px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+.price{
+font-size:34px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.pricing-features{
+list-style:none;
+padding:0;
+margin-bottom:25px;
+}
+
+.pricing-features li{
+margin-bottom:10px;
+font-size:15px;
+}
+
+.pricing-features li:before{
+content:"✔";
+color:#2ecc71;
+margin-right:8px;
+}
+
+.start-btn{
+display:inline-block;
+background:#ff7a00;
+color:#fff;
+padding:14px 28px;
+border-radius:30px;
+font-weight:600;
+text-decoration:none;
+transition:0.3s;
+}
+
+.start-btn:hover{
+background:#e56800;
+}
+
+.limited{
+margin-top:10px;
+font-size:13px;
+color:#888;
+}
+
+/* WHATSAPP SECTION */
+
+.whatsapp-community{
+margin-top:20px;
+}
+
+.whatsapp-box{
+background:#ffffff;
+border-radius:18px;
+padding:30px 40px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.whatsapp-icon img{
+width:50px;
+}
+
+.whatsapp-text h3{
+margin-bottom:5px;
+font-size:22px;
+}
+
+.whatsapp-text p{
+color:#666;
+font-size:14px;
+}
+
+.whatsapp-btn{
+background:#25D366;
+color:#fff;
+padding:12px 24px;
+border-radius:30px;
+font-weight:600;
+text-decoration:none;
+}
+
+.whatsapp-btn:hover{
+background:#1ebc5b;
+}
+.free-features-section{
+padding:80px 20px;
+background:#f7f7f9;
+text-align:center;
+}
+
+.section-header h2{
+font-size:34px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.section-header p{
+color:#777;
+margin-bottom:50px;
+}
+
+.features-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+max-width:1100px;
+margin:auto;
+}
+
+.feature-card{
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:all .35s ease;
+position:relative;
+overflow:hidden;
+}
+
+.feature-card .icon{
+font-size:45px;
+margin-bottom:30px;
+color:#ff7a00;
+}
+
+.feature-card h3{
+font-size:18px;
+margin-bottom:10px;
+}
+
+.feature-card p{
+font-size:14px;
+color:#666;
+}
+
+/* Hover Animation */
+
+.feature-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+.feature-card::before{
+content:"";
+position:absolute;
+top:-50%;
+left:-50%;
+width:200%;
+height:200%;
+background:radial-gradient(circle, rgba(255,122,0,0.12) 0%, transparent 60%);
+opacity:0;
+transition:opacity .35s ease;
+}
+
+.feature-card:hover::before{
+opacity:1;
+}
+
+.feature-card:hover .icon{
+transform:scale(1.2);
+transition:.3s;
+color:#ff7a00;
+}
+@media(max-width:992px){
+.features-grid{
+grid-template-columns:1fr 1fr;
+}
+}
+
+@media(max-width:600px){
+.features-grid{
+grid-template-columns:1fr;
+}
 }
