@@ -9,9 +9,9 @@
     <meta hNutrition and trainer ka registration kaise hoga ?ttp-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Pixel-plus">
-    <meta name="description" content="Co Fitness">
+    <meta name="description" content="Cd Fitness">
     <!-- ======== Page title ============ -->
-    <title>Co Fitness</title>
+    <title>Cd Fitness</title>
     <!--<< Favcion >>-->
     <link rel="shortcut icon" href="assets/img/favicon.svg">
     <!--<< Bootstrap min.css >>-->
@@ -323,6 +323,9 @@
     <section class="plan-section">
 
         <div class="container">
+            <div class="corner-top">
+            <img src="assets/img/cofitness/9.png" alt="corner image">
+        </div>
 
             <div class="plan-wrapper">
 
@@ -358,7 +361,7 @@
                         <li>Email Plan Delivery</li>
                     </ul>
 
-                    <a href="#" class="start-btn">
+                    <a href="#" class="start-btn diet-btn" onclick="openForm()">
                         Generate Free Plan
                     </a>
 
@@ -460,7 +463,7 @@
 
 
 
-    <!-- GT Footer Section Start -->
+     <!-- GT Footer Section Start -->
     <footer class="gt-footer-section-3 fix bg-cover" style="background-image: url('assets/img/cofitness/bg3.png');">
         <div class="container">
             <div class="gt-footer-info-wrapper">
@@ -503,13 +506,13 @@
                                     </div>
                                     <div class="gt-content">
                                         <span>Need help? Call us</span>
-                                        <h4><a href="tel:+480045678900">+4800 45 678 900</a></h4>
+                                        <h4><a href="tel:+97 1566959392">+97 1566959392</a></h4>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 ps-lg-5 wow fadeInUp" data-wow-delay=".4s">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 ps-lg-5 wow fadeInUp" data-wow-delay=".4s">
                         <div class="gt-footer-widget-items">
                             <div class="gt-widget-head">
                                 <h3>Useful Links</h3>
@@ -526,24 +529,34 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="service.html">
-                                        Service
+                                    <a href="free-plan.html">
+                                       Free Diet Plan
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="training.html">
-                                        Upcomming Classes
+                                    <a href="co-plan.html">
+                                        Premium Plan
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Trainer-plan.html">
+                                        Trainer Plan
                                     </a>
                                 </li>
                                 <li>
                                     <a href="news.html">
-                                        Blog Post
+                                        Blog
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">
+                                        Contact
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 ps-lg-5 wow fadeInUp" data-wow-delay=".6s">
+                    <!-- <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 ps-lg-5 wow fadeInUp" data-wow-delay=".6s">
                         <div class="gt-footer-widget-items">
                             <div class="gt-widget-head">
                                 <h3>Useful links</h3>
@@ -551,22 +564,22 @@
                             <ul class="gt-list-area">
                                 <li>
                                     <a href="training-details.html">
-                                        Cardio Strength
+                                    Blog
                                     </a>
                                 </li>
                                 <li>
                                     <a href="training-details.html">
-                                        Weight Lifting
+                                       Contact Us
                                     </a>
                                 </li>
                                 <li>
                                     <a href="training-details.html">
-                                        Beginner Pilates
+                                        Privacy Policy
                                     </a>
                                 </li>
                                 <li>
                                     <a href="training-details.html">
-                                        Body Balance
+                                        Term & Conditions
                                     </a>
                                 </li>
                                 <li>
@@ -576,7 +589,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 ps-lg-2 wow fadeInUp" data-wow-delay=".8s">
                         <div class="gt-footer-widget-items">
                             <div class="gt-widget-head">
@@ -589,7 +602,7 @@
                                 <form action="#">
                                     <div class="form-clt">
                                         <input type="text" name="email" id="email" placeholder="Your Email Address">
-                                        <button type="submit" class="gt-theme-btn">
+                                        <button type="submit" class="gt-theme-btn-black">
                                             <span class="shotfit-btn__text">SUBSCRIBE NOW <i
                                                     class="fa-regular fa-arrow-up-right"></i></span>
                                             <span class="shotfit-btn__hover shotfit-btn__hover--1"></span>
@@ -625,6 +638,120 @@
             </div>
         </div>
     </footer>
+
+     <div class="diet-modal" id="dietModal">
+    
+        <div class="diet-box">
+    
+            <span class="close-btn" onclick="closeForm()">×</span>
+    
+            <h2>Get Your AI Diet Plan</h2>
+    
+            <form id="dietForm">
+    
+                <div class="grid">
+    
+                    <input type="number" placeholder="Age" required>
+    
+                    <select required>
+                        <option value="">Gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+    
+                    <input type="number" placeholder="Height (cm)" required>
+    
+                    <input type="number" placeholder="Weight (kg)" required>
+    
+                    <select required>
+                        <option value="">Fitness Goal</option>
+                        <option>Weight Loss</option>
+                        <option>Muscle Gain</option>
+                        <option>Fat Loss</option>
+                        <option>General Fitness</option>
+                    </select>
+    
+                    <select required>
+                        <option value="">Diet Preference</option>
+                        <option>Vegetarian</option>
+                        <option>Non Vegetarian</option>
+                        <option>Vegan</option>
+                    </select>
+    
+                    <select required>
+                        <option value="">Activity Level</option>
+                        <option>Sedentary</option>
+                        <option>Lightly Active</option>
+                        <option>Moderately Active</option>
+                        <option>Very Active</option>
+                    </select>
+    
+                    <textarea placeholder="Medical Conditions (optional)"></textarea>
+    
+                </div>
+    
+                <div class="terms">
+    
+                    <input type="checkbox" id="terms">
+    
+                    <label>
+                        I agree that the AI generated diet plan is informational only and not medical advice.
+                    </label>
+    
+                </div>
+    
+                <p class="error" id="errorMsg">Please accept Terms & Conditions</p>
+    
+                <button class="submit-btn">Generate My Diet Plan</button>
+    
+            </form>
+    
+        </div>
+    
+    </div>
+
+    <div class="wa-popup" id="waPopup">
+    
+        <div class="wa-box">
+    
+            <h3>One More Step</h3>
+    
+            <p>To receive your AI diet plan, please join our WhatsApp community first.</p>
+    
+            <a href="https://chat.whatsapp.com/YOUR-LINK" target="_blank" class="wa-btn">
+                Join WhatsApp Community
+            </a>
+    
+        </div>
+    
+    </div>
+
+
+     <script>
+        function openForm() {
+            document.getElementById("dietModal").style.display = "flex";
+        }
+
+        function closeForm() {
+            document.getElementById("dietModal").style.display = "none";
+        }
+
+        document.getElementById("dietForm").addEventListener("submit", function (e) {
+
+            e.preventDefault();
+
+            let terms = document.getElementById("terms");
+
+            if (!terms.checked) {
+                document.getElementById("errorMsg").style.display = "block";
+                return;
+            }
+
+            document.getElementById("dietModal").style.display = "none";
+            document.getElementById("waPopup").style.display = "flex";
+
+        });
+    </script>
 
     <!--<< All JS Plugins >>-->
     <script src="assets/js/jquery-3.7.1.min.js"></script>

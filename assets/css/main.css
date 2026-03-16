@@ -3466,9 +3466,10 @@ span {
   }
 }
 .gt-footer-info-wrapper .gt-footer-info-items p {
-  color: var(--gt-white);
-  opacity: 0.7;
-  margin-bottom: 20px;
+      color: #000000;
+    opacity: 1;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 .gt-footer-info-wrapper .gt-footer-info-items h5 {
   font-weight: 500;
@@ -3487,8 +3488,8 @@ span {
   text-align: center;
   font-size: 16px;
   display: block;
-  background: rgba(255, 255, 255, 0.12);
-  color: var(--gt-white);
+  background: var(--gt-white);
+  color: var(--gt-theme);
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   text-align: center;
@@ -3523,8 +3524,8 @@ span {
   color: var(--gt-black);
 }
 .gt-footer-widget-wrapper-3 .gt-footer-widget-items .gt-footer-content p {
-  color: #020202;
-  opacity: 0.7;
+  color: #ffffff;
+  opacity: 0.9;
 }
 
 .gt-footer-widget-wrapper-3 .gt-footer-widget-items .gt-footer-content .gt-call-info {
@@ -3559,29 +3560,30 @@ span {
   margin-bottom: 20px;
 }
 .gt-footer-widget-wrapper-3 .gt-footer-widget-items .gt-list-area li a {
-  color: #262525;
-  opacity: 0.7;
+  color: #fffdfd;
+  opacity: 1;
 }
 .gt-footer-widget-wrapper-3 .gt-footer-widget-items .gt-list-area li:hover {
   margin-left: 5px;
 }
 .gt-footer-widget-wrapper-3 .gt-footer-widget-items .gt-list-area li:hover a {
-  color: var(--gt-theme);
+  color: var(--gt-black);
 }
 .gt-footer-widget-wrapper-3 .gt-footer-widget-items .form-clt {
   position: relative;
   margin-top: 24px;
 }
 .gt-footer-widget-wrapper-3 .gt-footer-widget-items .form-clt input {
-  width: 100%;
-  outline: none;
-  border: none;
-  background: rgba(255, 255, 255, 0.12);
-  line-height: 1;
-  padding: 0 20px;
-  color: var(--gt-white);
-  opacity: 0.7;
-  height: 60px;
+      width: 100%;
+    outline: none;
+    border: none;
+    background: #000000;
+    line-height: 1;
+    padding: 0 20px;
+    color: var(--gt-white);
+    opacity: 0.9;
+    height: 60px;
+    margin-bottom: 20px;
 }
 .gt-footer-widget-wrapper-3 .gt-footer-widget-items .form-clt input::placeholder {
   color: var(--gt-white);
@@ -9865,6 +9867,7 @@ padding:80px 20px;
 background: url(../img/cofitness/plan-bg.png);
 background-repeat: no-repeat;
 background-size: cover;
+position: relative;
 }
 
 .container{
@@ -9876,10 +9879,8 @@ margin:auto;
 display:grid;
 grid-template-columns:1.3fr 0.7fr;
 gap:40px;
-/*
-* Created with https://www.css-gradient.com
-* Gradient link: https://www.css-gradient.com/?c1=f4bb3d&c2=e58849&gt=l&gd=dtl
-*/
+
+
 padding:50px;
 border-radius:20px;
 box-shadow:0 20px 50px rgba(0,0,0,0.08);
@@ -9890,11 +9891,13 @@ margin-bottom:40px;
 font-size:34px;
 font-weight:700;
 margin-bottom:10px;
+
 }
 
 .subtitle{
-color:#777;
-margin-bottom:25px;
+    color: #151414;
+    font-weight: 600;
+    margin-bottom: 25px;
 }
 
 .plan-features{
@@ -9903,10 +9906,13 @@ padding:0;
 }
 
 .plan-features li{
-margin-bottom:12px;
-font-size:16px;
-padding-left:28px;
-position:relative;
+margin-bottom: 12px;
+    font-size: 16px;
+    padding-left: 28px;
+    position: relative;
+    font-weight: 600;
+color:#ff7a00;
+    
 }
 
 .plan-features li:before{
@@ -9926,8 +9932,8 @@ text-align:center;
 }
 
 .price{
-font-size:34px;
-font-weight:700;
+font-size:35px;
+font-weight:800;
 margin-bottom:20px;
 }
 
@@ -9938,20 +9944,22 @@ margin-bottom:25px;
 }
 
 .pricing-features li{
-margin-bottom:10px;
-font-size:15px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;;
 }
 
 .pricing-features li:before{
 content:"✔";
-color:#2ecc71;
+color:#000000;
 margin-right:8px;
 }
 
 .start-btn{
 display:inline-block;
-background:#ff7a00;
-color:#fff;
+background:#ffffff;
+color:#000000;
 padding:14px 28px;
 border-radius:30px;
 font-weight:600;
@@ -9966,7 +9974,7 @@ background:#e56800;
 .limited{
 margin-top:10px;
 font-size:13px;
-color:#888;
+color:#000000;
 }
 
 /* WHATSAPP SECTION */
@@ -9991,13 +9999,13 @@ width:50px;
 }
 
 .whatsapp-text h3{
-margin-bottom:5px;
-font-size:22px;
+margin-bottom:8px;
+font-size:25px;
 }
 
 .whatsapp-text p{
 color:#666;
-font-size:14px;
+font-size:15px;
 }
 
 .whatsapp-btn{
@@ -10048,19 +10056,21 @@ overflow:hidden;
 }
 
 .feature-card .icon{
-font-size:45px;
+font-size:55px;
 margin-bottom:30px;
 color:#ff7a00;
 }
 
 .feature-card h3{
-font-size:18px;
-margin-bottom:10px;
+font-size:22px;
+margin-bottom:12px;
+color:#ff7a00;
+
 }
 
 .feature-card p{
-font-size:14px;
-color:#666;
+font-size:16px;
+color:#070707;
 }
 
 /* Hover Animation */
@@ -10101,4 +10111,145 @@ grid-template-columns:1fr 1fr;
 .features-grid{
 grid-template-columns:1fr;
 }
+}
+
+
+.diet-btn{
+padding:14px 30px;
+background:#ffffff;
+color:#000000;
+border:none;
+border-radius:30px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.diet-btn:hover{
+background:#ff7f1f;
+transform:scale(1.05);
+}
+
+.diet-modal{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.6);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:9999999;
+}
+
+.diet-box{
+background:#fff;
+width:90%;
+max-width:700px;
+padding:35px;
+border-radius:15px;
+box-shadow:0 20px 60px rgba(0,0,0,.2);
+position:relative;
+}
+
+.diet-box h2{
+text-align:center;
+color:#ff6a00;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-top:20px;
+}
+
+.grid input,
+.grid select,
+.grid textarea{
+padding:12px;
+border-radius:8px;
+border:1px solid #ddd;
+font-size:14px;
+}
+
+.grid textarea{
+grid-column:1/3;
+}
+
+.submit-btn{
+margin-top:20px;
+width:100%;
+padding:14px;
+background:#ff6a00;
+color:#fff;
+border:none;
+border-radius:8px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.submit-btn:hover{
+background:#ff7f1f;
+}
+
+.close-btn{
+position:absolute;
+top:15px;
+right:20px;
+font-size:22px;
+cursor:pointer;
+color:#ff6a00;
+}
+
+.terms{
+display:flex;
+gap:10px;
+margin-top:15px;
+font-size:14px;
+}
+
+.error{
+color:red;
+display:none;
+font-size:14px;
+}
+
+.wa-popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.7);
+display:none;
+justify-content:center;
+align-items:center;
+}
+
+.wa-box{
+background:#fff;
+padding:35px;
+text-align:center;
+border-radius:12px;
+max-width:360px;
+}
+
+.wa-box h3{
+color:#ff6a00;
+}
+
+.wa-btn{
+display:inline-block;
+margin-top:15px;
+padding:12px 20px;
+background:#25D366;
+color:#fff;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
 }
