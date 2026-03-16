@@ -4991,7 +4991,7 @@ span {
   }
 }
 .gt-breadcrumb-wrapper .gt-page-heading h1 {
-  color: var(--gt-white);
+  color: var(--gt-theme);
   font-size: 72px;
   position: relative;
   text-transform: capitalize;
@@ -5025,13 +5025,13 @@ span {
   }
 }
 .gt-breadcrumb-wrapper .gt-page-heading .gt-breadcrumb-items li {
-  color: var(--gt-white);
+  color: var(--gt-theme);
   text-transform: capitalize;
   font-weight: 400;
   font-size: 16px;
 }
 .gt-breadcrumb-wrapper .gt-page-heading .gt-breadcrumb-items li a {
-  color: var(--gt-white);
+  color: var(--gt-black);
   transition: all 0.4s ease-in-out;
 }
 .gt-breadcrumb-wrapper .gt-page-heading .gt-breadcrumb-items li a:hover {
@@ -5042,7 +5042,7 @@ span {
   margin-right: 5px;
 }
 .gt-breadcrumb-wrapper .gt-page-heading .gt-breadcrumb-items li i {
-  color: var(--gt-white);
+  color: var(--gt-black);
 }
 .gt-breadcrumb-wrapper .gt-breadcrumb-image {
   position: absolute;
