@@ -10176,6 +10176,7 @@ padding:12px;
 border-radius:8px;
 border:1px solid #ddd;
 font-size:14px;
+color: #000;
 }
 
 .grid textarea{
@@ -10424,3 +10425,75 @@ order:-1;
 }
 
 }
+
+.social-video-section {
+  background: #ddd;
+}
+  .social-video-section {
+      padding: 60px 0;
+    }
+
+    .custom-card {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.08);
+      height: 100%;
+      transition: 0.4s;
+    }
+
+    .custom-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    }
+
+    .section-title {
+      color: #000000;
+      margin-bottom: 15px;
+      font-size: 30px;
+    }
+
+    /* Facebook */
+    .fb-post-wrapper iframe {
+      border-radius: 12px;
+      width: 100%;
+      height: 420px;
+    }
+
+    /* Video Slider */
+    .video-card {
+      padding: 30px 20px;
+    }
+
+    .video-card video {
+      width: 100%;
+      height:350px;
+      object-fit: fill;
+      border-radius: 12px;
+    }
+
+    /* Controls */
+    .slider-controls {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .slider-controls button {
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 50%;
+      background: orange;
+      color: #000;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .slider-controls button:hover {
+      background: #121111;
+      transform: scale(1.1);
+      color: #fff;
+    }
