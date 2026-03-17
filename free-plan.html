@@ -117,7 +117,8 @@
                         </div>
                     </div>
                     <p class="text d-none d-xl-block">
-                        Helping you build a stronger body and a healthier lifestyle through structured training and balanced nutrition.
+                        Helping you build a stronger body and a healthier lifestyle through structured training and
+                        balanced nutrition.
                     </p>
                     <div class="mobile-menu fix mb-3"></div>
                     <div class="offcanvas__contact">
@@ -322,8 +323,8 @@
 
         <div class="container">
             <div class="corner-top">
-            <img src="assets/img/cofitness/9.png" alt="corner image">
-        </div>
+                <img src="assets/img/cofitness/9.png" alt="corner image">
+            </div>
 
             <div class="plan-wrapper">
 
@@ -420,13 +421,15 @@
                 <div class="feature-card">
                     <div class="icon">🏋️</div>
                     <h3>Personalized Workout Plan</h3>
-                    <p>Get a workout routine tailored to your goal — whether it’s fat loss, muscle gain, or staying fit.</p>
+                    <p>Get a workout routine tailored to your goal — whether it’s fat loss, muscle gain, or staying fit.
+                    </p>
                 </div>
 
                 <div class="feature-card">
                     <div class="icon">🥗</div>
                     <h3>Beginner Diet Guidance</h3>
-                    <p>Follow simple, practical diet suggestions that help you build healthy eating habits without confusion.</p>
+                    <p>Follow simple, practical diet suggestions that help you build healthy eating habits without
+                        confusion.</p>
                 </div>
 
                 <div class="feature-card">
@@ -450,7 +453,8 @@
                 <div class="feature-card">
                     <div class="icon">📱</div>
                     <h3>WhatsApp Community Access</h3>
-                    <p>Join our fitness community to stay motivated, get tips, and connect with others on the same journey.</p>
+                    <p>Join our fitness community to stay motivated, get tips, and connect with others on the same
+                        journey.</p>
                 </div>
 
             </div>
@@ -461,7 +465,7 @@
 
 
 
-    
+
     <!-- GT Footer Section Start -->
     <footer class="gt-footer-section-3 fix bg-cover" style="background-image: url('assets/img/cofitness/bg3.png');">
         <div class="container">
@@ -496,7 +500,8 @@
                             </div>
                             <div class="gt-footer-content">
                                 <p>
-                                    Helping you build a stronger body and a healthier lifestyle through structured training and balanced nutrition.
+                                    Helping you build a stronger body and a healthier lifestyle through structured
+                                    training and balanced nutrition.
                                 </p>
                                 <div class="gt-call-info">
                                     <div class="gt-icon">
@@ -528,7 +533,7 @@
                                 </li>
                                 <li>
                                     <a href="free-plan.html">
-                                       Free Diet Plan
+                                        Free Diet Plan
                                     </a>
                                 </li>
                                 <li>
@@ -637,30 +642,32 @@
         </div>
     </footer>
 
-     <div class="diet-modal" id="dietModal">
-    
+    <div class="diet-modal" id="dietModal">
+
         <div class="diet-box">
-    
+
             <span class="close-btn" onclick="closeForm()">×</span>
-    
-            <h2>Get Your  Diet Plan</h2>
-    
+
+            <h2>Get Your Diet Plan</h2>
+
             <form id="dietForm">
-    
+
                 <div class="grid">
-    
+                    <input type="text" placeholder="Enter First Name" required>
+                    <input type="text" placeholder="Enter Last Name" required>
+                    <input type="text" placeholder="Enter Phone Number" required>
                     <input type="number" placeholder="Age" required>
-    
+
                     <select required>
                         <option value="">Gender</option>
                         <option>Male</option>
                         <option>Female</option>
                     </select>
-    
+
                     <input type="number" placeholder="Height (cm)" required>
-    
+
                     <input type="number" placeholder="Weight (kg)" required>
-    
+
                     <select required>
                         <option value="">Fitness Goal</option>
                         <option>Weight Loss</option>
@@ -668,14 +675,14 @@
                         <option>Fat Loss</option>
                         <option>General Fitness</option>
                     </select>
-    
+
                     <select required>
                         <option value="">Diet Preference</option>
                         <option>Vegetarian</option>
                         <option>Non Vegetarian</option>
                         <option>Vegan</option>
                     </select>
-    
+
                     <select required>
                         <option value="">Activity Level</option>
                         <option>Sedentary</option>
@@ -683,49 +690,52 @@
                         <option>Moderately Active</option>
                         <option>Very Active</option>
                     </select>
-    
+
                     <textarea placeholder="Medical Conditions (optional)"></textarea>
-    
+
                 </div>
-    
+
                 <div class="terms">
-    
+
                     <input type="checkbox" id="terms">
-    
+
                     <label>
                         I agree that the AI generated diet plan is informational only and not medical advice.
                     </label>
-    
+                    
+
                 </div>
-    
+                <div class="text-center">
+                    <p><a href="term-condition.html">Term & Condition</a></p>
+                </div>
                 <p class="error" id="errorMsg">Please accept Terms & Conditions</p>
-    
+
                 <button class="submit-btn">Generate My Diet Plan</button>
-    
+
             </form>
-    
+
         </div>
-    
+
     </div>
 
     <div class="wa-popup" id="waPopup">
-    
+
         <div class="wa-box">
-    
+
             <h3>One More Step</h3>
-    
+
             <p>To receive your AI diet plan, please join our WhatsApp community first.</p>
-    
+
             <a href="https://chat.whatsapp.com/YOUR-LINK" target="_blank" class="wa-btn">
                 Join WhatsApp Community
             </a>
-    
+
         </div>
-    
+
     </div>
 
 
-     <script>
+    <script>
         function openForm() {
             document.getElementById("dietModal").style.display = "flex";
         }

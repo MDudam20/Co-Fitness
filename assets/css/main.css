@@ -5302,7 +5302,9 @@ span {
 @media (max-width: 1199px) {
   .gt-hero-1 {
     padding-bottom: 0;
+    height: 900px;
   }
+  
 }
 @media (max-width: 991px) {
   .gt-hero-1 {
@@ -10023,6 +10025,116 @@ text-decoration:none;
 .whatsapp-btn:hover{
 background:#1ebc5b;
 }
+/* ================= RESPONSIVE ================= */
+
+/* Tablet (992px and below) */
+@media (max-width: 992px) {
+
+.plan-wrapper {
+    grid-template-columns: 1fr;
+    padding: 30px;
+}
+
+.plan-left h2 {
+    font-size: 28px;
+}
+
+.price {
+    font-size: 30px;
+}
+
+}
+
+/* Mobile (768px and below) */
+@media (max-width: 768px) {
+.limited img{
+  width: 80%;
+}
+.plan-section {
+    padding: 60px 15px;
+}
+
+.plan-wrapper {
+    padding: 25px;
+    gap: 25px;
+}
+
+.plan-left h2 {
+    font-size: 24px;
+}
+
+.subtitle {
+    font-size: 14px;
+}
+
+.plan-features li {
+    font-size: 14px;
+}
+
+.pricing-features li {
+    font-size: 15px;
+}
+
+.start-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+}
+
+/* WhatsApp Box Stack */
+.whatsapp-box {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 25px;
+}
+
+.whatsapp-icon img {
+    width: 40px;
+}
+
+.whatsapp-text h3 {
+    font-size: 20px;
+}
+
+.whatsapp-text p {
+    font-size: 14px;
+}
+
+.whatsapp-btn {
+    width: 100%;
+    text-align: center;
+}
+
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+
+.plan-left h2 {
+    font-size: 20px;
+}
+
+.price {
+    font-size: 26px;
+}
+
+.plan-wrapper {
+    padding: 20px;
+}
+
+.pricing-card {
+    padding: 25px;
+}
+
+.whatsapp-text h3 {
+    font-size: 18px;
+}
+
+.whatsapp-text p {
+    font-size: 13px;
+}
+
+}
 .free-features-section{
 padding:80px 20px;
 background:#f7f7f9;
@@ -10145,6 +10257,7 @@ display:none;
 justify-content:center;
 align-items:center;
 z-index:9999999;
+
 }
 
 .diet-box{
@@ -10155,6 +10268,8 @@ padding:35px;
 border-radius:15px;
 box-shadow:0 20px 60px rgba(0,0,0,.2);
 position:relative;
+overflow-y: auto;
+height: 650px;
 }
 
 .diet-box h2{
@@ -10222,7 +10337,96 @@ color:red;
 display:none;
 font-size:14px;
 }
+/* ================= RESPONSIVE MODAL ================= */
 
+/* Tablet */
+@media (max-width: 992px) {
+
+.diet-box {
+    max-width: 600px;
+    padding: 30px;
+}
+
+.grid {
+    gap: 12px;
+}
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+.diet-modal {
+    padding: 15px;
+}
+
+/* VERY IMPORTANT for mobile scrolling */
+.diet-box {
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 25px;
+}
+
+/* Single column layout */
+.grid {
+    grid-template-columns: 1fr;
+}
+
+/* Fix textarea full width */
+.grid textarea {
+    grid-column: 1/2;
+}
+
+.diet-box h2 {
+    font-size: 20px;
+}
+
+/* Inputs smaller */
+.grid input,
+.grid select,
+.grid textarea {
+    font-size: 13px;
+    padding: 10px;
+}
+
+.submit-btn {
+    font-size: 14px;
+    padding: 12px;
+}
+
+/* Terms alignment fix */
+.terms {
+    align-items: flex-start;
+    font-size: 13px;
+}
+
+/* Close button adjust */
+.close-btn {
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+}
+
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+.diet-box {
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.diet-box h2 {
+    font-size: 18px;
+}
+
+.submit-btn {
+    font-size: 13px;
+}
+
+}
 .wa-popup{
 position:fixed;
 top:0;
@@ -10497,3 +10701,20 @@ order:-1;
       transform: scale(1.1);
       color: #fff;
     }
+
+    
+@media(max-width:1200px){
+
+.corner-top img {
+    width: 134px;
+    animation: floatMove 3s ease-in-out infinite alternate;
+}
+}
+@media(max-width:500px){
+
+.gt-hero-1 .gt-hero-content h1 {
+    color: var(--gt-black);
+    font-size: 33px;
+}
+   
+}
