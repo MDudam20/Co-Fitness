@@ -653,22 +653,22 @@
             <form id="dietForm">
 
                 <div class="grid">
-                    <input type="text" placeholder="Enter First Name" required>
-                    <input type="text" placeholder="Enter Last Name" required>
-                    <input type="text" placeholder="Enter Phone Number" required>
-                    <input type="number" placeholder="Age" required>
+                    <input type="text" placeholder="Enter Full Name" name="fname" required>
+                    <input type="text" placeholder="Enter Phone Number" name="phone" required>
+                    <input type="email" placeholder="Enter Email Id" name="email" required>
+                    <input type="number" placeholder="Age" name="age" required>
 
-                    <select required>
+                    <select required name="gender">
                         <option value="">Gender</option>
                         <option>Male</option>
                         <option>Female</option>
                     </select>
 
-                    <input type="number" placeholder="Height (cm)" required>
+                    <input type="number" placeholder="Height (cm)" name="height" required>
 
-                    <input type="number" placeholder="Weight (kg)" required>
+                    <input type="number" placeholder="Weight (kg)" name="weight" required>
 
-                    <select required>
+                    <select required name="goal">
                         <option value="">Fitness Goal</option>
                         <option>Weight Loss</option>
                         <option>Muscle Gain</option>
@@ -676,14 +676,14 @@
                         <option>General Fitness</option>
                     </select>
 
-                    <select required>
+                    <select required name="diet_type">
                         <option value="">Diet Preference</option>
                         <option>Vegetarian</option>
                         <option>Non Vegetarian</option>
                         <option>Vegan</option>
                     </select>
 
-                    <select required>
+                    <select required name="activity">
                         <option value="">Activity Level</option>
                         <option>Sedentary</option>
                         <option>Lightly Active</option>
@@ -691,7 +691,7 @@
                         <option>Very Active</option>
                     </select>
 
-                    <textarea placeholder="Medical Conditions (optional)"></textarea>
+                    <textarea name="medical" placeholder="Medical Conditions (optional)"></textarea>
 
                 </div>
 
@@ -702,7 +702,7 @@
                     <label>
                         I agree that the AI generated diet plan is informational only and not medical advice.
                     </label>
-                    
+
 
                 </div>
                 <div class="text-center">
@@ -726,7 +726,7 @@
 
             <p>To receive your AI diet plan, please join our WhatsApp community first.</p>
 
-            <a href="https://chat.whatsapp.com/YOUR-LINK" target="_blank" class="wa-btn">
+            <a href="javascript:void(0)" target="_blank" class="wa-btn" id="wa-btn">
                 Join WhatsApp Community
             </a>
 
@@ -735,31 +735,7 @@
     </div>
 
 
-    <script>
-        function openForm() {
-            document.getElementById("dietModal").style.display = "flex";
-        }
 
-        function closeForm() {
-            document.getElementById("dietModal").style.display = "none";
-        }
-
-        document.getElementById("dietForm").addEventListener("submit", function (e) {
-
-            e.preventDefault();
-
-            let terms = document.getElementById("terms");
-
-            if (!terms.checked) {
-                document.getElementById("errorMsg").style.display = "block";
-                return;
-            }
-
-            document.getElementById("dietModal").style.display = "none";
-            document.getElementById("waPopup").style.display = "flex";
-
-        });
-    </script>
 
     <!--<< All JS Plugins >>-->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
@@ -785,6 +761,103 @@
     <script src="assets/js/wow.min.js"></script>
     <!--<< Main.js >>-->
     <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function openForm() {
+            document.getElementById("dietModal").style.display = "flex";
+        }
+
+        function closeForm() {
+            document.getElementById("dietModal").style.display = "none";
+        }
+
+        document.getElementById("dietForm").addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            let terms = document.getElementById("terms");
+
+            if (!terms.checked) {
+                document.getElementById("errorMsg").style.display = "block";
+                return;
+            }
+
+            // 🔹 Collect form data
+            const formData = new FormData(this);
+            const data = {};
+
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+            localStorage.setItem('data', JSON.stringify(data));
+            document.getElementById("dietModal").style.display = "none";
+            document.getElementById("waPopup").style.display = "flex";
+        });
+
+
+        document.getElementById("wa-btn").addEventListener("click", async function (e) {
+            e.preventDefault();
+
+            let data = localStorage.getItem('data');
+
+            window.open("https://chat.whatsapp.com/YOUR-LINK", "_blank");
+
+            try {
+
+                // 🔥 Loading Alert
+                Swal.fire({
+                    title: 'Generating Diet Plan...',
+                    text: 'Please wait ⏳',
+                    allowOutsideClick: false,
+                    didOpen: () => {
+                        Swal.showLoading();
+                    }
+                });
+
+                // 🔥 API CALL (Axios)
+                const response = await axios.post("https://backend.sparkmindscoders.com/api/generate-diet", JSON.parse(data), {
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                });
+
+                console.log(response.data);
+
+                // ✅ Success Alert
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success 🎉',
+                    text: response.data.message || 'Diet plan sent successfully!'
+                });
+
+                // ✅ UI Changes
+                document.getElementById("waPopup").style.display = "none";
+                localStorage.removeItem('data');
+
+
+            } catch (error) {
+
+                console.error(error);
+
+                let message = "Something went wrong!";
+
+                if (error.response) {
+                    message = error.response.data.message || message;
+                }
+
+                // ❌ Error Alert
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error ❌',
+                    text: message
+                });
+
+                localStorage.removeItem('data');
+            }
+        });
+
+    </script>
 </body>
 
 
