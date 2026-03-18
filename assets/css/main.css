@@ -378,8 +378,11 @@ span {
   height: initial;
 }
 .gt-about-wrapper .gt-about-image img {
-  width: 100%;
-  height: 100%;
+      width: 100%;
+    height: 100%;
+    /* padding: 40px;
+    border-radius: 71px;
+     box-shadow: 0 5px 10px rgba(0,0,0,0.1); */
 }
 .gt-about-wrapper .gt-about-content .gt-text {
   margin-top: 25px;
@@ -412,7 +415,7 @@ span {
   padding-bottom: 24px;
 }
 .gt-about-wrapper .gt-about-content .gt-icon-wrap ul li .gt-icon {
-  font-size: 56px;
+  font-size: 28px;
   color: var(--gt-theme);
 }
 .gt-about-wrapper .gt-about-content .gt-icon-wrap ul li .gt-content {
@@ -5370,7 +5373,7 @@ span {
 .gt-hero-1 .gt-hero-content p {
   font-size:25px;
   font-weight: 400;
-  color: var(--gt-header);
+  color: var(--gt-black);
   opacity: 0.8;
   max-width: 790px;
   margin-top: 25px;
@@ -7401,14 +7404,14 @@ span {
   width: 100%;
   height: 300px;
       width: 100%;
-    height: 300px;
+    height: 200px;
     
     border-radius: 10px 10px 0px 0px;
 
 }
 .gt-service-offer-item-2 .gt-service-offer-content {
   background-color: var(--gt-white);
-  padding: 0 0 29px;
+  padding: 0 0 0px;
   position: relative;
   border-radius:  10px;
 }
@@ -7485,6 +7488,7 @@ span {
   background-repeat: no-repeat;
   background-size: 0% 2px;
   display: inline;
+  font-size: 20px;
 }
 .gt-service-offer-item-2 .gt-service-offer-content .gt-service-icon-item .gt-content h3 a:hover {
   color: var(--gt-theme);
@@ -10632,17 +10636,15 @@ order:-1;
 }
 
 .social-video-section {
-  background: #ddd;
+
 }
-  .social-video-section {
-      padding: 60px 0;
-    }
+  
 
     .custom-card {
       background: #ffffff;
-      padding: 20px;
+      padding: 40px 20px;
       border-radius: 16px;
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(240, 117, 16, 0.8);
       height: 100%;
       transition: 0.4s;
     }
@@ -10718,4 +10720,274 @@ order:-1;
     font-size: 33px;
 }
    
+}
+.hero-trust {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Each item */
+.hero-trust span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 107, 0, 0.08);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 16px;
+  color: #000000;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* Icons */
+.hero-trust i {
+  color: #ff6b00;
+  font-size: 16px;
+}
+
+/* 🔥 Tablet (768px) */
+@media (max-width: 768px) {
+  .hero-trust {
+    justify-content: center;
+  }
+
+  .hero-trust span {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+}
+
+/* 🔥 Mobile (480px) */
+@media (max-width: 480px) {
+  .hero-trust {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .hero-trust span {
+    width: 100%;
+    justify-content: center;
+    font-size: 13px;
+  }
+}
+.s{
+  color: var(--gt-theme);
+}
+.problem-section {
+  position: relative;
+  padding: 120px 0;
+  background: linear-gradient(135deg, #fff, #fff7f2);
+  overflow: hidden;
+}
+
+/* 🔥 Background Glow Shapes */
+.bg-shape {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #ff6b00;
+  opacity: 0.08;
+  filter: blur(120px);
+  border-radius: 50%;
+}
+
+.shape1 {
+  top: -80px;
+  left: -80px;
+}
+
+.shape2 {
+  bottom: -80px;
+  right: -80px;
+}
+
+/* Title */
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111;
+}
+
+/* CARD */
+.problem-card {
+  background: rgba(255, 118, 6,0.8);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 107, 0, 0.15);
+  height: 250px;
+}
+
+/* 🔥 Light Sweep Effect */
+.problem-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+  transition: 0.6s;
+}
+
+.problem-card:hover::after {
+  left: 100%;
+}
+
+/* ICON */
+.icon-box {
+  width: 65px;
+  height: 65px;
+  background: var(--gt-bg2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  transition: 0.3s;
+}
+
+.icon-box i {
+  font-size: 26px;
+  color: #000000;
+}
+
+/* 🔥 ICON ANIMATION */
+.problem-card:hover .icon-box {
+  transform: rotate(8deg) scale(1.1);
+}
+
+/* TEXT */
+.problem-card h5 {
+  font-weight: 800;
+  margin-bottom: 15px;
+  font-size: 23px;
+}
+
+.problem-card p {
+  font-size: 17px;
+  color: #262525;
+}
+
+/* HOVER */
+.problem-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 50px rgba(255, 107, 0, 0.15);
+}
+
+/* Punch */
+.problem-punch {
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ff6b00;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 26px;
+  }
+}
+/* Highlight text */
+.solution-highlight {
+ font-weight: 600;
+    color: #ff6b00;
+    margin-top: 10px;
+    margin-bottom: 33px;
+    font-size: 23px;
+    text-decoration: underline;
+}
+.star-img{
+      position: absolute;
+    left: 0px;
+    top: 157px;
+    transform: translateY(-50%);
+    width: 300px;
+    opacity: 1;
+  animation: floatStar 6s ease-in-out infinite;
+}
+
+/* Animation */
+@keyframes floatStar{
+  0%{
+    transform: translateY(-50%) translateX(0);
+  }
+  50%{
+    transform: translateY(-60%) translateX(10px);
+  }
+  100%{
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+
+.cta-section-parallax {
+  background: url('../img/cofitness/cta.png') center/cover no-repeat fixed;
+  position: relative;
+  padding: 120px 0;
+}
+
+/* Dark overlay */
+.cta-overlay {
+  /* background: rgba(0, 0, 0, 0.65); */
+  padding: 70px 0;
+}
+
+/* Title */
+.cta-title {
+  font-size: 65px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* Subtitle */
+.cta-subtitle {
+      font-size: 25px;
+    color: #ddd;
+    margin-bottom: 65px;
+}
+
+/* Button */
+.cta-btn {
+  background: #ff6b00;
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #fff;
+  color: #ff6b00;
+  transform: scale(1.05);
+}
+
+/* Trust */
+.cta-trust {
+  margin-top: 25px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/* Mobile Fix (important for parallax) */
+@media (max-width: 768px) {
+  .cta-section-parallax {
+    background-attachment: scroll; /* FIX for mobile */
+  }
+
+  .cta-title {
+    font-size: 28px;
+  }
 }
