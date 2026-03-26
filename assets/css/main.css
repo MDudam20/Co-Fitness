@@ -427,6 +427,7 @@ span {
 }
 .gt-about-wrapper .gt-about-content .gt-icon-wrap .gt-video-thumb {
   position: relative;
+  right: -70px;
 }
 @media (max-width: 575px) {
   .gt-about-wrapper .gt-about-content .gt-icon-wrap .gt-video-thumb {
@@ -9626,9 +9627,9 @@ transform:translateY(0px);
 background-image: url(../img/cofitness/bg5.png);
 
 background-repeat: no-repeat;
-background-size: contain;
+background-size: cover;
 position:relative;
-overflow:hidden;
+
 }
 
 .container{
@@ -11117,4 +11118,28 @@ margin: 0 20px;
     animation-delay: 1s;
     width: 250px;
 }
+}
+.highlight-blink{
+  color:#ff6a00;
+  font-weight:600;
+ font-size: 25px;
+  padding:2px 8px;
+  border-radius:4px;
+  animation:blinkHighlight 1.5s infinite;
+  text-decoration: underline;
+}
+
+@keyframes blinkHighlight{
+  0%{
+    opacity:1;
+    
+  }
+  50%{
+    opacity:0.4;
+   
+  }
+  100%{
+    opacity:1;
+   
+  }
 }
