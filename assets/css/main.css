@@ -3617,7 +3617,7 @@ span {
   opacity: 0.7;
 }
 .footer-bottom3 p b {
-  color: var(--gt-theme);
+  color: var(--gt-black);
   opacity: 1;
 }
 .footer-bottom3 .gt-footer-bottom-wrapper {
