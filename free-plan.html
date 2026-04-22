@@ -900,11 +900,22 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 
-    <script>
+<script>
         var input = document.querySelector("#phone");
-        window.intlTelInput(input, {
+
+        var iti = window.intlTelInput(input, {
             initialCountry: "in",
             separateDialCode: true,
+        });
+
+        // 👉 Add +91 automatically on submit or change
+        input.addEventListener("input", function () {
+            var countryData = iti.getSelectedCountryData();
+            var dialCode = "+" + countryData.dialCode;
+
+            if (input.value && !input.value.startsWith("+")) {
+                input.value = dialCode + input.value;
+            }
         });
     </script>
 </body>
