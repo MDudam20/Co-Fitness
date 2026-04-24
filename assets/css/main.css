@@ -11191,7 +11191,7 @@ border: 2px solid var(--gt-theme);
 @media(max-width:768px){
 
 .sticky-btn{
-right:-140px;
+right:-220px;
 padding:10px 14px;
 font-size:14px;
 }
