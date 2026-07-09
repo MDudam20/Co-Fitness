@@ -9635,120 +9635,361 @@ position:relative;
 
 }
 
-.container{
-max-width:1200px;
-margin:auto;
+
+/* ==============================
+   ABOUT COACH SECTION
+================================ */
+
+.about-coach {
+    overflow: hidden;
 }
 
-.about-grid{
-display:grid;
-grid-template-columns:1fr 1.2fr;
-gap:50px;
-align-items:center;
+.about-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    align-items: center;
+    gap: clamp(30px, 5vw, 60px);
 }
 
-.coach-image-wrapper{
-position:relative;
+
+/* ==============================
+   COACH IMAGE
+================================ */
+
+.coach-image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    margin-inline: auto;
 }
 
-.coach-img{
-width:100%;
-border-radius:20px;
-box-shadow:0 20px 50px rgba(0,0,0,0.1);
+.coach-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.10);
 }
 
-.experience-badge{
-position:absolute;
-bottom:20px;
-left:20px;
-background:#ff7a00;
-color:#fff;
-padding:14px 18px;
-border-radius:10px;
-font-weight:600;
-text-align:center;
+
+/* ==============================
+   EXPERIENCE BADGE
+================================ */
+
+.experience-badge {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+
+    min-width: 100px;
+    padding: 12px 18px;
+
+    color: #fff;
+    background: #ff7a00;
+
+    border-radius: 12px;
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(255, 122, 0, 0.30);
 }
 
-.experience-badge span{
-font-size:22px;
-display:block;
+.experience-badge span {
+    display: block;
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 800;
+    line-height: 1.1;
 }
 
-.coach-content h2{
-font-size:40px;
-font-weight:700;
-margin-bottom:15px;
+.experience-badge p {
+    margin: 4px 0 0;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 600;
 }
 
-.coach-content p{
-color:#020202;
-line-height:1.9;
-margin-bottom:15px;
-font-size:17px;
+
+/* ==============================
+   CONTENT
+================================ */
+
+.coach-content {
+    min-width: 0;
 }
 
-.stats-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:15px;
-margin:30px 0;
+.coach-content h2 {
+    margin-bottom: 18px;
+
+    font-size: clamp(28px, 3.2vw, 40px);
+    font-weight: 700;
+    line-height: 1.25;
 }
 
-.stat-card{
-background:white;
-padding:20px;
-border-radius:12px;
-text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,0.05);
+.coach-content > p {
+    margin-bottom: 15px;
+
+    color: #020202;
+    font-size: clamp(15px, 1.2vw, 17px);
+    line-height: 1.8;
 }
 
-.stat-card h3{
-color:#ff7a00;
-font-size:32px;
-margin-bottom:5px;
+.coach-content > p:last-of-type {
+    margin-bottom: 0;
 }
 
-.stat-card span{
-font-size:17px;
-color:#000000;
-font-weight: 800;
+
+/* ==============================
+   STATS
+================================ */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+
+    margin: 30px 0;
 }
 
-.about-btn{
-display:inline-block;
-background:#ff7a00;
-color:white;
-padding:14px 30px;
-border-radius:30px;
-font-weight:600;
-text-decoration:none;
-transition:0.3s;
+.stat-card {
+    padding: 20px 15px;
+
+    background: #fff;
+    border-radius: 12px;
+    text-align: center;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-.about-btn:hover{
-background:#e36800;
-}
-@media(max-width:992px){
-
-.about-grid{
-grid-template-columns:1fr;
-text-align:center;
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
-.experience-badge{
-left:50%;
-transform:translateX(-50%);
+.stat-card h3 {
+    margin-bottom: 5px;
+
+    color: #ff7a00;
+    font-size: clamp(25px, 3vw, 32px);
+    font-weight: 800;
 }
 
-.stats-grid{
-grid-template-columns:1fr;
+.stat-card span {
+    color: #000;
+    font-size: clamp(14px, 1.2vw, 17px);
+    font-weight: 700;
 }
 
+
+/* ==============================
+   CTA BUTTON
+================================ */
+
+.about-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 50px;
+    margin-top: 28px;
+    padding: 14px 30px;
+
+    color: #fff;
+    background: #ff7a00;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.about-btn:hover {
+    color: #fff;
+    background: #e36800;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 25px rgba(255, 122, 0, 0.25);
+}
+
+
+/* ==============================
+   TABLET
+================================ */
+
+@media (max-width: 1199px) {
+
+    .about-grid {
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: 35px;
+    }
+
+    .coach-content > p {
+        line-height: 1.7;
+    }
+}
+
+
+/* ==============================
+   TABLET PORTRAIT
+================================ */
+
+@media (max-width: 991px) {
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .coach-image-wrapper {
+        max-width: 600px;
+    }
+
+    .coach-content {
+        text-align: center;
+    }
+
+    .coach-content > p {
+        max-width: 750px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .stats-grid {
+        max-width: 650px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+
+/* ==============================
+   MOBILE
+================================ */
+
+@media (max-width: 767px) {
+
+    .about-grid {
+        gap: 30px;
+    }
+
+    .coach-image-wrapper {
+        max-width: 100%;
+    }
+
+    .coach-img {
+        border-radius: 16px;
+    }
+
+    .experience-badge {
+        left: 15px;
+        bottom: 15px;
+
+        min-width: 85px;
+        padding: 10px 14px;
+    }
+
+    .coach-content h2 {
+        line-height: 1.3;
+        font-size: 22px;
+    }
+
+    .coach-content > p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 15px 8px;
+    }
+
+    .about-btn {
+        width: 100%;
+        max-width: 320px;
+
+        padding: 14px 20px;
+    }
+}
+
+
+/* ==============================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 480px) {
+
+    .about-grid {
+        gap: 25px;
+    }
+
+    .coach-img {
+        aspect-ratio: 4 / 5;
+    }
+
+    .experience-badge {
+        left: 10px;
+        bottom: 10px;
+    }
+
+    .experience-badge span {
+        font-size: 22px;
+    }
+
+    .experience-badge p {
+        font-size: 12px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        padding: 15px;
+    }
+
+    .coach-content > p {
+        text-align: left;
+    }
+}
+
+
+/* ==============================
+   REDUCED MOTION ACCESSIBILITY
+================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .stat-card,
+    .about-btn {
+        transition: none;
+    }
+
+    .stat-card:hover,
+    .about-btn:hover {
+        transform: none;
+    }
 }
 
 .vmv-section {
             padding: 150px 0;
-            background: url(../img/cofitness/bg3.png);
+            background: url(../img/cofitness/bg3.webp);
             background-position: center;
             background-size:cover;
             background-repeat: no-repeat;
@@ -9757,19 +9998,20 @@ grid-template-columns:1fr;
 
         .vmv-card {
             position: relative;
-            padding: 70px 40px 40px 40px;
+            padding: 50px 15px 30px 15px;
             background: #ffffff;
             border: 1px solid #3a3939;
             border-radius: 20px;
             transition: .4s;
-            height: 100%;
+            /* height: 100%; */
             margin-top: 20px;
         }
 
         .vmv-card h3 {
             font-size: 34px;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            margin-top: 10px;
             text-align: center;
             color: var(--gt-theme);
         }
@@ -9873,6 +10115,20 @@ grid-template-columns:1fr;
             .vmv-card {
                 margin-bottom: 60px;
             }
+            .vmv-card h3 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            text-align: center;
+            color: var(--gt-theme);
+        }
+
+        .vmv-card p {
+            color: #2d2a2a;
+            line-height: 1.6;
+            text-align: center;
+        }
 
         }
 .plan-section{
@@ -10560,85 +10816,297 @@ position:relative;
 z-index:2;
 }
 
+/* =========================
+   APPROACH SECTION
+========================= */
 
-.approach-section{
-padding:100px 0;
-background:#fff;
+.approach-section {
+    padding: 100px 0;
+    background: #fff;
 }
 
-.approach-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
+
+/* =========================
+   GRID LAYOUT
+========================= */
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 60px;
+    align-items: center;
 }
 
-.approach-left h2{
-font-size:40px;
-font-weight:700;
-margin-bottom:15px;
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.approach-left {
+    min-width: 0;
 }
 
-.approach-left h2 span{
-color:#ff6a00;
+.approach-left h2 {
+    margin-bottom: 18px;
+    font-size: clamp(32px, 3vw, 48px);
+    font-weight: 700;
+    line-height: 1.2;
 }
 
-.approach-desc{
-color:#666;
-margin-bottom:40px;
-max-width:500px;
+.approach-left h2 span {
+    color: var(--gt-theme);
 }
 
-.approach-step{
-margin-bottom:25px;
-padding-left:20px;
-border-left:3px solid #000000;
-transition:0.3s;
+.approach-desc {
+    max-width: 650px;
+    margin: 0 0 35px;
+    color: #555;
+    font-size: 17px;
+    line-height: 1.8;
 }
 
-.approach-step:hover{
-border-left:3px solid #ff6a00;
-transform:translateX(6px);
+
+/* =========================
+   APPROACH STEPS
+========================= */
+
+.approach-step {
+    position: relative;
+    margin-bottom: 25px;
+    padding: 5px 0 5px 22px;
+
+    border-left: 3px solid var(--gt-black);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
 }
 
-.approach-step h3{
-font-size:22px;
-margin-bottom:5px;
-color: var(--gt-theme);
+.approach-step:last-child {
+    margin-bottom: 0;
 }
 
-.approach-step p{
-font-size:17px;
-color:#000000;
+.approach-step:hover {
+    border-left-color: var(--gt-theme);
+    transform: translateX(6px);
 }
 
-.approach-right img{
-width:100%;
-border-radius:15px;
-box-shadow:0 20px 50px rgba(0,0,0,0.15);
-transition:0.4s;
-border: 3px solid var(--gt-black);
-padding: 10px;
+.approach-step h3 {
+    margin: 0 0 8px;
+    color: var(--gt-theme);
+    font-size: clamp(19px, 1.6vw, 22px);
+    font-weight: 700;
+    line-height: 1.35;
 }
 
-.approach-right img:hover{
-transform:scale(1.03);
+.approach-step p {
+    margin: 0;
+    color: #222;
+    font-size: 16px;
+    line-height: 1.7;
 }
 
-/* responsive */
 
-@media(max-width:900px){
+/* =========================
+   RIGHT IMAGE
+========================= */
 
-.approach-grid{
-grid-template-columns:1fr;
+.approach-right {
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 18px;
 }
 
-.approach-right{
-order:-1;
+.approach-right img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    padding: 10px;
+
+    border: 3px solid var(--gt-black);
+    border-radius: 18px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
 }
 
+.approach-right:hover img {
+    transform: scale(1.025);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
 }
 
+
+/* =========================
+   LAPTOP
+========================= */
+
+@media (max-width: 1199.98px) {
+
+    .approach-section {
+        padding: 90px 0;
+    }
+
+    .approach-grid {
+        gap: 40px;
+    }
+
+    .approach-desc {
+        font-size: 16px;
+    }
+
+    .approach-step {
+        margin-bottom: 22px;
+    }
+
+    .approach-step p {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991.98px) {
+
+    .approach-section {
+        padding: 75px 0;
+    }
+
+    .approach-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .approach-right {
+        order: -1;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .approach-left {
+        width: 100%;
+    }
+
+    .approach-desc {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767.98px) {
+
+    .approach-section {
+        padding: 60px 0;
+    }
+
+    .approach-grid {
+        gap: 35px;
+    }
+
+    .approach-left h2 {
+        margin-bottom: 15px;
+        font-size: 32px;
+    }
+
+    .approach-desc {
+        margin-bottom: 28px;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .approach-step {
+        margin-bottom: 22px;
+        padding-left: 16px;
+    }
+
+    .approach-step h3 {
+        font-size: 20px;
+    }
+
+    .approach-step p {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .approach-right img {
+        padding: 7px;
+        border-width: 2px;
+        border-radius: 14px;
+    }
+
+    /* Prevent unwanted movement on touch devices */
+
+    .approach-step:hover {
+        transform: none;
+    }
+
+    .approach-right:hover img {
+        transform: none;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .approach-section {
+        padding: 50px 0;
+    }
+
+    .approach-grid {
+        gap: 30px;
+    }
+
+    .approach-left h2 {
+        font-size: 28px;
+        line-height: 1.25;
+    }
+
+    .approach-desc {
+        font-size: 14px;
+    }
+
+    .approach-step {
+        padding-left: 14px;
+        border-left-width: 2px;
+    }
+
+    .approach-step h3 {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .approach-step p {
+        font-size: 14px;
+    }
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .approach-step,
+    .approach-right img {
+        transition: none;
+    }
+}
 .social-video-section {
 
 }
