@@ -383,15 +383,15 @@
                         <li>Email Plan Delivery</li>
                     </ul>
 
-                    <!-- <a href="#" class="start-btn diet-btn" onclick="openForm()">
+                    <a href="#" class="start-btn diet-btn" onclick="openForm()">
                         Generate Free Plan
-                    </a> -->
-                   <button type="button"
+                    </a>
+                    <!-- <button type="button"
         class="start-btn diet-btn"
         data-bs-toggle="modal"
         data-bs-target="#underConstructionModal">
     Generate Free Plan
-</button>
+</button> -->
 
                     <p class="limited">
                         No credit card required
@@ -713,7 +713,10 @@
                     <input type="tel" id="phone" name="phone" />
                     <p id="error-msg" style="color:red; display:none;">Invalid phone number</p>
                     <input type="email" placeholder="Your Email Address" name="email" required>
-                    <input type="number" placeholder="Age" name="age" required>
+                    <div>
+                        <label>Date of Birth</label>
+                        <input type="date" name="age" required>
+                    </div>
 
                     <select required name="gender">
                         <option value="">Gender</option>
@@ -727,7 +730,7 @@
 
                     <select required name="goal">
                         <option value="">Fitness Goal</option>
-                        <option>Weight Loss</option>
+                        <!-- <option>Weight Loss</option> -->
                         <option>Muscle Gain</option>
                         <option>Fat Loss</option>
                         <option>General Fitness</option>
@@ -790,7 +793,8 @@
 
             <h3>One More Step</h3>
 
-            <p>Make sure to FOLLOW our WhatsApp channel, “CD Fitness Tribe,” to get your free plan and stay updated on your fitness journey.</p>
+            <p>Make sure to FOLLOW our WhatsApp channel, “CD Fitness Tribe,” to get your free plan and stay updated on
+                your fitness journey.</p>
 
             <a href="javascript:void(0)" target="_blank" class="wa-btn" id="wa-btn">
                 Join WhatsApp Community
@@ -801,31 +805,31 @@
     </div>
 
     <!-- Under Construction Modal -->
-<div class="modal fade" id="underConstructionModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content text-center">
-            
-            <div class="modal-header">
-                <h5 class="modal-title">🚧 Under Construction</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
+    <div class="modal fade" id="underConstructionModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
 
-            <div class="modal-body">
-                <h4>Website Under Construction</h4>
-                <p>
-                    This feature is currently under development and will be available soon.
-                </p>
-            </div>
+                <div class="modal-header">
+                    <h5 class="modal-title">🚧 Under Construction</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
 
-            <div class="modal-footer justify-content-center">
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
-                    OK
-                </button>
-            </div>
+                <div class="modal-body">
+                    <h4>Website Under Construction</h4>
+                    <p>
+                        This feature is currently under development and will be available soon.
+                    </p>
+                </div>
 
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                        OK
+                    </button>
+                </div>
+
+            </div>
         </div>
     </div>
-</div>
 
 
 
@@ -980,7 +984,7 @@
                 });
 
                 // 🔥 API CALL (Axios)
-                const response = await axios.post("https://backend.sparkmindscoders.com/api/generate-diet", JSON.parse(data), {
+                const response = await axios.post("https://cdfitness-portal.sparkmindscoders.com/api/generate-diet", JSON.parse(data), {
                     headers: {
                         "Accept": "application/json"
                     }
